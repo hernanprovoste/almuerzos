@@ -1,0 +1,45 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><h4>Rut</h4></th>
+        <th><h4>Nombre Completo</h4></th>
+        <th><h4>Cantidad Almuerzos</h4></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><h4><%= @persona.rut %></h4></td>
+        <td><h4><%= @persona.nombre %></h4></td>
+        <td><h4><%= @persona.cantidad %></h4></td>
+        <td><%= link_to 'Edit', edit_persona_path(@persona), class: 'btn btn-success btn-color-white' %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Fecha Retiro Almuerzo</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% if @persona.sacas.present? %>
+        <% @persona.sacas.each do |saca| %>
+          <tr>
+            <td><h5><%= saca.fecha %></h5></td>
+          </tr>
+        <% end %>
+      <% else %>
+      <tr>
+        <td><h4>El alumno no registra almuerzos sacados a la fecha</h4></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Back', personas_path, class: 'btn btn-success btn-color-white' %>
+</div>

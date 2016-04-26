@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+		<div class="formulario">
+			<div class="col-md-12">
+				<% if @saca.persona.cantidad.to_i > @c.to_i %>
+					<%= render 'muestra_persona' %>
+					<h2>Tiene: <%= @saca.persona.cantidad %> Almuerzo(s)</h2>
+					<h2>Le quedan: <%= @saca.persona.cantidad.to_i - @c.to_i %> Almuerzos</h2>
+					<%= render 'form' %>
+				<% else %>
+					<div class="error">
+						<h1>Error: El alumno ya cumplió con sus <%= @c.to_i %> almuerzos.</h1>
+						<%= link_to '<- Volver atrás', sacas_path, class: 'btn btn-warning btn-lg' %>
+					</div>				
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+	<div class="tabla">
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table">
+			        <thead>
+			          <tr>
+			            <th>Fecha</th>
+			            <th>Rut Alumno</th>
+			            <th>Nombre Alumno</th>
+			          </tr>
+			        </thead>
+
+			        <tbody>
+			            <% @sacas.each do |saca| %>
+			              <tr>
+			                <td><%= saca.fecha %></td>
+			                <td><%= saca.persona.rut %></td>
+			                <td><%= saca.persona.nombre %></td>
+			              </tr>
+			            <% end %>			          
+			        </tbody>
+			      </table>
+			</div>
+		</div>
+	</div>
+</div>

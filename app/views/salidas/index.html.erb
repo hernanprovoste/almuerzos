@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Salidas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @salidas.each do |salida| %>
+      <tr>
+        <td><%= salida.fecha %></td>
+        <td><%= link_to 'Show', salida %></td>
+        <td><%= link_to 'Edit', edit_salida_path(salida) %></td>
+        <td><%= link_to 'Destroy', salida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Salida', new_salida_path %>

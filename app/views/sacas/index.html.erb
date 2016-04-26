@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render "salidas" %>      
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
+
+      <h1>Registro Retiro Almuerzos</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Rut Alumno</th>
+            <th>Persona</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% @sacas.each do |saca| %>
+              <tr>
+                <td><%= saca.fecha %></td>
+                <td><%= saca.persona.rut %></td>
+                <td><%= saca.persona.nombre %></td>
+              </tr>
+            <% end %>
+          
+        </tbody>
+      </table>
+
+      <br>      
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_for(@saca) do |f| %>
+        <% if @saca.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@saca.errors.count, "error") %> prohibited this saca from being saved:</h2>
+
+            <ul>
+            <% @saca.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="fecha">
+          <%= f.datetime_select :fecha %>
+        </div>
+        <div class="field">
+          <%= f.hidden_field :persona_id, :value => @persona_id%>
+        </div>
+        <div class="col-md-12">
+          <%= f.submit "Agregar Almuerzo", class: 'btn btn-primary btn-lg' %>
+          <%= link_to 'Cancelar', sacas_path, class: 'btn btn-warning btn-lg' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

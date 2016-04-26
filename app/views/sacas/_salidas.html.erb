@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="formulario-inicio">
+			<%= form_tag(sacas_path, :method => "get", id: "search-form") do %>
+			  <%= text_field_tag :search, params[:search], :autofocus => true, placeholder: "Ingresar Rut", class: 'form-control' %>
+			  <%= submit_tag "Buscar Alumno", :name => nil, class: 'btn-formulario btn btn-success' %>
+			<% end %>
+		</div>
+	</div>
+</div>

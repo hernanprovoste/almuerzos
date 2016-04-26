@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background-color: #bdc3c7;
+}
+
+.jumbotron {
+	background-color: transparent;
+	padding-bottom: 0px;
+	padding-top: 10px;
+	display: block;
+}
+
+.jumbotron h1 {
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	float: right;
+}
+
+img {
+	width: 200px;
+	height: auto;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+.fecha {
+	visibility: hidden;
+}
+
+.presentacion {
+	text-align: center;
+}
+
+.formulario {
+	text-align: center;
+}
+
+.formulario-inicio {
+	text-align: center;
+	margin: 1px auto;
+	width: 30%;
+}
+
+.btn-formulario {
+	margin-top: 25px;
+}
+
+.error {
+	text-align: center;
+	color: red;
+}
+.tabla {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+}
+
+.titulo {
+  width: 100%;
+  text-align: center;
+}
+
+.titulo h1 {
+  font-size: 35px;
+  margin-top: 25px;
+}
+
+.btn-color-white {
+  color: white;
+}
+
+.btn-color-white a {
+  color: white;
+}
+
+.btn-color-white a:visited {
+  color: white;
+}

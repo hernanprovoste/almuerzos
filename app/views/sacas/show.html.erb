@@ -1,0 +1,27 @@
+<%= render 'form' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @saca.fecha %>
+</p>
+
+<p>
+  <strong>Persona:</strong>
+  <%= @saca.persona.rut %>
+</p>
+
+<p>
+  <strong>Nommbre:</strong>
+  <%= @saca.persona.nombre %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @saca.persona.cantidad %>
+</p>
+
+
+<%= link_to 'Edit', edit_saca_path(@saca) %> |
+<%= link_to 'Back', sacas_path %>
